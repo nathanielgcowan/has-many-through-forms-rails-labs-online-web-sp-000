@@ -8,11 +8,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    post = Post.create(post_params)
+    @post = Post.create(post_params)
   end
 
   def create
-    @post = Post.create(post_params)
+    post = Post.create(post_params)
     redirect_to post
   end
 
