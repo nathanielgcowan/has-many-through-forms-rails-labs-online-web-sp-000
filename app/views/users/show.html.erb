@@ -1,6 +1,6 @@
 
 <h1><%= @user.username %></h1>
 
-<% @user.posts.each do |post| %>
+<%= @user.post.each do |post| %>
   <%= link_to post.title, post_path(post) %>
 <% end %>
