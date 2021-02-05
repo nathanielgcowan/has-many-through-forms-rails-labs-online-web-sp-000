@@ -2,3 +2,9 @@
 <p><%= @post.content %></h1>
 
 Categories: <%= @post.categories.map(&:name).join(' ') %>
+
+
+<%= @post.comments.each do |comment| %>
+  <%= comment.user.username %>
+  <%= comment.content %>
+<% end %>
