@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<div class=post-content>
-  <%= @post.title %>
-  <%= @post.content %>
-  <% @post.categories.each do |category| %>
-    <%= category.name %>
-  <% end %>
-  <% @post.comments.each do |comment| %>
-    <%= comment.content %>
-  <% end %>
-</div>
-=======
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></h1>
 
-
-  <%= @post.title %>
-  <%= @post.content %>
->>>>>>> 1e5f054ffd6c785b2778657f37cf389ba70307b8
+Categories: <%= @post.categories.map(&:name).join(' ') %>
